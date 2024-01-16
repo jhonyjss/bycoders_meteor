@@ -1,9 +1,12 @@
 import { useState } from "react";
+import BaseContainer from "./components/BaseContainer";
 
 function App(): JSX.Element {
   return (
     <>
-      <h1>teste</h1>
+      <BaseContainer>
+        <h1 className="text-green-200 text-lg">teste</h1>
+      </BaseContainer>
     </>
   );
 }
