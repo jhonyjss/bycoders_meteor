@@ -1,0 +1,10 @@
+body,
+#root {
+  height: 100vh;
+}
+
+.weather-daily-list li {
+  display: flex;
+  padding: 20px;
+  background: red;
+}

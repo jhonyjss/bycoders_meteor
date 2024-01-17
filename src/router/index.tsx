@@ -1,11 +1,20 @@
-import { useRoutes } from "react-router-dom";
-import App from "../App";
+import { Navigate, useRoutes } from "react-router-dom";
+import Forecasts from "../pages/forecasts";
+import AddForecast from "../pages/add-forecast";
 
 const Router = () => {
   const router = useRoutes([
     {
       path: "/",
-      element: <App />
+      element: <Navigate to="/forecasts" replace={true} />
+    },
+    {
+      path: "/add-forecast",
+      element: <AddForecast />
+    },
+    {
+      path: "/forecasts",
+      element: <Forecasts />
     }
   ]);
   return router;
