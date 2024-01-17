@@ -1,30 +1,33 @@
 # React + TypeScript + Vite
+## Projeto de Previsão do Tempo utilizando a API Open Meteo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto tem como objetivo criar previsões do tempo utilizando a API Open Meteo. A API Open Meteo fornece dados meteorológicos precisos e confiáveis. Você pode encontrar mais informações sobre a API [aqui](https://open-meteo.com/).
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto está organizado da seguinte forma:
 
-## Expanding the ESLint configuration
+- **src**: Contém o código-fonte do aplicativo.
+  - **http**: Centraliza o serviço utilizando Axios para efetuar requisições à API, utilizando a URL base fornecida pela Open Meteo.
+  - **components**: Contém componentes básicos do aplicativo, reutilizáveis em diferentes partes do sistema.
+  - **hooks**: Responsável pelo tratamento das requisições para salvar os dados de previsão com base na latitude e longitude.
+  - **interfaces**: Contém todas as interfaces utilizadas para tipificar o projeto, proporcionando um código mais seguro e legível.
+  - **pages**: Agrupa todas as páginas de acesso do aplicativo.
+  - **services**: Contém os repositórios responsáveis por realizar as requisições à API, tratando as respostas e fornecendo os dados ao frontend.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Como Executar o Projeto
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone o repositório para o seu ambiente local.
+2. Instale as dependências utilizando o comando `yarn install`.
+3. Execute o aplicativo com o comando `yarn dev`.
+4. Acesse o aplicativo no navegador através do endereço `http://localhost:3000`.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Certifique-se de configurar corretamente as variáveis de ambiente ou outros parâmetros necessários para autenticar e acessar a API Open Meteo.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, pull requests ou propor melhorias para o projeto.
+
+## Licença
+
+Este projeto é distribuído sob a licença [MIT](LICENSE). Consulte o arquivo LICENSE para obter mais detalhes.
